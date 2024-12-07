@@ -1,125 +1,118 @@
-# HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study
+# **Gated Fusion Network (GFN) for Adaptive Underwater Image Dehazing**
 
-Welcome to the official repository for **HuBot**, a biomimetic mobile robot designed for non-invasive wildlife monitoring and ecological research. This repository hosts the dataset, methodologies, and results associated with the HuBot project.
-
----
-
-## Overview
-
-The **Houbara bustard** is a critically endangered bird species that poses challenges for traditional research due to its elusive nature and sensitivity to human disturbances. To overcome these limitations, we introduce **HuBot**, a biomimetic robot designed to seamlessly integrate into the Houbara's natural habitat. Leveraging cutting-edge object detection algorithms and robust hardware, HuBot enables unprecedented insights into the Houbara's movement patterns, social interactions, and habitat use.
+Welcome to the official repository for **Gated Fusion Network (GFN)**, an advanced architecture designed to enhance underwater images by addressing challenges like light scattering, color distortion, and low illumination. This repository hosts the datasets, methodologies, experimental results, and code associated with the GFN project.
 
 ---
 
-## Dataset
+## **Overview**
+
+Underwater environments pose unique challenges for imaging due to light absorption, scattering, and noise, which degrade image quality and hinder its usability in critical domains such as marine exploration, underwater robotics, and environmental monitoring. To address these issues, we introduce the **Gated Fusion Network (GFN)**, which leverages **Reprogramming Adaptive Transformation Units (RATUs)** and a **Swin Transformer backbone** for dynamic and robust underwater image enhancement.
+
+---
+
+## **Dataset**
 
 ### **Key Details:**
-- **Size:** 5,000 images annotated for object detection.
-- **Sources:** In-house footage, online repositories, and globally deployed camera traps.
-- **Dataset Split:**
-  - Training: 4,000 images.
-  - Validation: 500 images.
-  - Testing: 500 images.
-- **Annotations:** Bounding boxes localizing Houbara bustards in various environments.
+- **Training Data:** LSUI3879 dataset (3,879 paired images)
+- **Testing Data:**
+  - LSUI400, UIEB100, Ocean_ex, EUVP_Test515
+  - Non-reference datasets: U45, RUIE_Color90, UPoor200, Challenging-60
+- **Custom Dataset:**
+  - **KUMP (KU Marine Pool):** 134,000 frames, with a curated subset of 400 representative images for testing.
 
 ### **Features:**
-- **Bias Mitigation:** Diverse lighting, backgrounds, and challenging scenarios.
-- **Data Augmentation:** Horizontal flips, cropping, blurring, and noise addition.
-- **Future Expansion:** Scaling to 50,000 images covering rare behaviors and subspecies.
+- **Diverse Conditions:** Covers turbidity, lighting variability, and color distortion.
+- **Comprehensive Annotations:** Paired ground truth and degraded images for objective evaluation.
+- **Augmentation:** Degradation effects applied to simulate real-world underwater conditions.
 
-The dataset supports the training and evaluation of object detection algorithms for non-invasive ecological monitoring.
+The dataset supports training and evaluation of state-of-the-art underwater image enhancement models.
 
 ---
 
-## Experimental Setup and Methodology
+## **Experimental Setup and Methodology**
 
 ### **Hardware**
-- **Platform:** NVIDIA Jetson AGX Xavier
+- **Platform:** NVIDIA GeForce RTX 4090 GPU
 - **Specifications:**
-  - NVIDIA Volta™ GPU with 10 TeraFLOPS
-  - 48 GB LPDDR4 memory
-- **Environment:** Ubuntu 18.04 LTS, PyTorch 2.2.1 with CUDA 11.8, OpenCV-Python
+  - CUDA 11.8, cuDNN 8.7.0
+  - 24 GB GDDR6X memory
+- **Environment:** Python 3.11.5, PyTorch 2.2.1
 
 ### **Software Pipeline**
-- **Data Management:** Real-time wireless transmission, preprocessing, and storage on a secure local server.
 - **Algorithms:**
-  - Object Detection: YOLOv9 for precise localization.
-  - Real-Time Performance: Optimized for embedded applications.
-- **Testing Environment:**
-  - Locations: Desert landscapes, coastal regions, and semi-urban environments.
-  - Climate: Extreme temperatures (10°C to 45°C) and high humidity (up to 95%).
+  - Image Enhancement: Gated Fusion Network (GFN) with RATUs
+  - Multi-stage Feature Fusion: Swin Transformer
+- **Testing Scenarios:**
+  - Reference-based datasets for objective metrics (e.g., PSNR, SSIM)
+  - Non-reference datasets for perceptual quality evaluation (e.g., UIQM, UCIQE).
 
 ---
 
-## Key Features and Contributions
+## **Key Features and Contributions**
 
-1. **Biomimetic Design:** Life-like appearance and movement minimize disturbance to wildlife.
-2. **Advanced Algorithms:**
-   - Real-time detection with YOLOv9.
-   - Enhanced environmental analysis with deep learning models.
-3. **Environmental Resilience:**
-   - Thermal insulation for extreme temperatures.
-   - Moisture-resistant materials for high humidity and precipitation.
-4. **Non-Invasive Observation:**
-   - Demonstrated ability to approach Houbara bustards without altering their behavior.
-
----
-
-## Results
-
-### **Object Detection Performance**
-- **Model:** YOLOv9
-- **Metrics:**
-  - mAP50: 98.56%
-  - Precision: 98.33%
-  - Recall: 94.55%
-  - F1-Score: 96.40%
-  - Inference Time: 0.0568 seconds
-
-### **Environmental Validation**
-- **Temperature:** Operated stably in temperatures ranging from 10°C to 45°C.
-- **Humidity:** Maintained functionality under 95% humidity.
-- **Live Trials:** Successfully interacted with Houbara bustards in controlled and natural environments.
+1. **Dynamic Image Enhancement:** GFN dynamically adapts to underwater conditions using gated fusion mechanisms.
+2. **Advanced Architectures:**
+   - Swin Transformer for global and local feature extraction.
+   - RATUs for adaptive feature refinement.
+3. **Comprehensive Evaluation:**
+   - State-of-the-art performance across diverse datasets.
+   - Significant improvement in PSNR, SSIM, and perceptual quality metrics.
+4. **Scalability:** Designed for real-world applications, including autonomous underwater vehicles (AUVs).
 
 ---
 
-## Future Work
+## **Results**
 
-1. Expanding the dataset to include:
-   - Rare Houbara behaviors.
-   - Multiple subspecies.
-   - Geographically diverse locations.
-2. Enhancing HuBot's hardware for:
-   - Improved waterproofing.
-   - Extended battery life.
-3. Refining algorithms to further reduce detection and localization errors.
+### **Quantitative Performance**
+- **LSUI400 Dataset:**
+  - PSNR: 30.00 dB
+  - SSIM: 0.904
+- **Ocean_ex Dataset:**
+  - UIQM: 1.110
+  - UCIQE: 0.567
 
----
-
-## Repository Structure
-
-/static/ # Contains media assets such as images and videos /images/ # Images used in the dataset and visualizations /videos/ # Videos showcasing HuBot's performance index.html # Main webpage for the project README.md # This file
-
+### **Visual Enhancements**
+- GFN significantly improves image clarity, color balance, and noise reduction compared to baseline models like WaterNet and RAUNE-Net.
+- Demonstrated robust performance under extreme conditions, including severe turbidity and low contrast.
 
 ---
 
-## Citation
+## **Future Work**
 
-If you use HuBot or its dataset, please cite our work:
-
-Lyes Saad Saoud, Loïc Lesobre, Enrico Sorato, Saud Al Qaydi, Yves Hingrat, Lakmal Seneviratne, Irfan Hussain. "HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study and Ecological Conservation."
-
+1. Optimizing GFN for real-time applications on resource-constrained devices.
+2. Expanding datasets to include:
+   - Extreme underwater conditions.
+   - Multi-modal data (e.g., sonar, hyperspectral imaging).
+3. Aligning enhancement outputs with downstream tasks such as species detection and habitat mapping.
 
 ---
 
-## Contact
+## **Repository Structure**
 
-For questions or collaboration inquiries, please contact:
+- **/datasets:** Sample datasets and evaluation data.
+- **/models:** Implementation of GFN and comparison baselines.
+- **/results:** Quantitative and visual performance metrics.
+- **/scripts:** Training and testing scripts.
+
+---
+
+## **Citation**
+
+If you use the GFN model or datasets, please cite our work:
+
+**Lyes Saad Saoud**, Irfan Hussain, "Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing."
+
+---
+
+## **Contact**
+
+For inquiries or collaboration, please contact:
 
 - **Lyes Saad Saoud** (Primary Contributor): `lyes.saoud@kustar.ac.ae`
 - **Irfan Hussain** (Corresponding Author): `irfan.hussain@ku.ac.ae`
 
 ---
 
-### License
+## **License**
 
 This repository is shared under the **CC BY 4.0 License**, allowing reuse for non-commercial purposes with proper attribution.
