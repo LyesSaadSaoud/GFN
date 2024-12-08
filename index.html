@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GFN: Before and After Dehazing</title>
   <style>
     .slider-container {
@@ -18,6 +17,9 @@
       display: block;
       width: 100%;
       height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     .image-after-wrapper {
       position: absolute;
@@ -25,7 +27,7 @@
       left: 0;
       height: 100%;
       overflow: hidden;
-      width: 50%; /* Default position for the slider */
+      width: 50%; /* Default slider position */
     }
     .slider-handle {
       position: absolute;
@@ -36,6 +38,14 @@
       background-color: red;
       cursor: ew-resize;
       z-index: 2;
+    }
+    .slider-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
   <meta name="description" content="GFN: Advancing Underwater Image Enhancement with Swin Transformer and Adaptive Transformations">
@@ -256,11 +266,11 @@ Testing on real underwater datasets showed clear advantages over existing method
 <section class="section">
   <div class="slider-container">
     <!-- Before Image -->
-    <img src="static/images/before1.jpg" alt="Before Dehazing" class="image-before">
+    <img src="static/images/before.jpg" alt="Before Dehazing" class="image-before">
     
     <!-- After Image -->
     <div class="image-after-wrapper">
-      <img src="static/images/after1.jpg" alt="After Dehazing" class="image-after">
+      <img src="static/images/after.jpg" alt="After Dehazing" class="image-after">
     </div>
     
     <!-- Slider -->
@@ -293,6 +303,12 @@ Testing on real underwater datasets showed clear advantages over existing method
     const percentage = (offsetX / rect.width) * 100;
     imageAfterWrapper.style.width = `${percentage}%`;
     sliderHandle.style.left = `${percentage}%`;
+  });
+
+  // Ensure images align properly when resizing the window
+  window.addEventListener('resize', () => {
+    const rect = sliderContainer.getBoundingClientRect();
+    imageAfterWrapper.style.height = `${rect.height}px`;
   });
 </script>
 
