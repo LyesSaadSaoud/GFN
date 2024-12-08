@@ -216,6 +216,74 @@ Testing on real underwater datasets showed clear advantages over existing method
   </div>
 </section>
 <!-- End Image Carousel -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Before and After Dehazing</h2>
+        <div class="slider-container" style="position: relative; max-width: 70%; margin: 0 auto; border-radius: 10px; overflow: hidden;">
+          <!-- Before Image -->
+          <img src="static/images/before.jpg" alt="Before Dehazing" class="image-before" style="display: block; width: 100%; height: auto;">
+          
+          <!-- After Image -->
+          <div class="image-after-wrapper" style="position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; width: 50%;">
+            <img src="static/images/after.jpg" alt="After Dehazing" class="image-after" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <!-- Slider -->
+          <div class="slider-handle" style="position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background-color: red; cursor: ew-resize;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // JavaScript for the slider effect
+  const sliderContainer = document.querySelector('.slider-container');
+  const imageBefore = document.querySelector('.image-before');
+  const imageAfter = document.querySelector('.image-after');
+  const imageAfterWrapper = document.querySelector('.image-after-wrapper');
+  const sliderHandle = document.querySelector('.slider-handle');
+
+  let isDragging = false;
+
+  // Adjust "after" image size to match "before" image dimensions dynamically
+  const resizeImages = () => {
+    const containerWidth = imageBefore.clientWidth;
+    const containerHeight = imageBefore.clientHeight;
+
+    imageAfter.style.width = `${containerWidth}px`;
+    imageAfter.style.height = `${containerHeight}px`;
+  };
+
+  window.addEventListener('resize', resizeImages);
+  resizeImages(); // Initial call to sync sizes on load
+
+  sliderHandle.addEventListener('mousedown', () => {
+    isDragging = true;
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  sliderContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const rect = sliderContainer.getBoundingClientRect();
+    let offsetX = e.clientX - rect.left;
+
+    // Constrain the slider within the container
+    if (offsetX < 0) offsetX = 0;
+    if (offsetX > rect.width) offsetX = rect.width;
+
+    // Update slider and image widths
+    const percentage = (offsetX / rect.width) * 100;
+    imageAfterWrapper.style.width = `${percentage}%`;
+    sliderHandle.style.left = `${percentage}%`;
+  });
+</script>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
