@@ -220,9 +220,9 @@ Testing on real underwater datasets showed clear advantages over existing method
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Before and After Dehazing</h2>
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-multiline">
       <!-- First Slider -->
-      <div class="column is-half">
+      <div class="column">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before1.jpg" alt="Before Dehazing" data-label="Before">
@@ -232,7 +232,7 @@ Testing on real underwater datasets showed clear advantages over existing method
       </div>
 
       <!-- Second Slider -->
-      <div class="column is-half">
+      <div class="column">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before2.jpg" alt="Before Dehazing" data-label="Before">
@@ -242,7 +242,7 @@ Testing on real underwater datasets showed clear advantages over existing method
       </div>
 
       <!-- Third Slider -->
-      <div class="column is-half">
+      <div class="column">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before3.jpg" alt="Before Dehazing" data-label="Before">
@@ -252,7 +252,7 @@ Testing on real underwater datasets showed clear advantages over existing method
       </div>
 
       <!-- Fourth Slider -->
-      <div class="column is-half">
+      <div class="column">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before4.jpg" alt="Before Dehazing" data-label="Before">
@@ -293,6 +293,19 @@ Testing on real underwater datasets showed clear advantages over existing method
   }
 </style>
 
+<script>
+  // Initialize Juxtapose sliders
+  document.addEventListener('DOMContentLoaded', function () {
+    const juxtaposeContainers = document.querySelectorAll('.juxtapose');
+    juxtaposeContainers.forEach(container => {
+      new juxtapose.JXSlider(container, {
+        startingPosition: "50%", // Initial slider position
+        showLabels: true,        // Show Before/After labels
+        mode: "horizontal"       // Horizontal slider
+      });
+    });
+  });
+</script>
 
 
 
