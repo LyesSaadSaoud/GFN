@@ -269,41 +269,35 @@ Testing on real underwater datasets showed clear advantages over existing method
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
 <style>
-  /* Define uniform dimensions for all sliders */
+  /* Uniform dimensions for all sliders */
   .slider-container {
-    width: 100%;
     max-width: 400px;
     height: 300px;
-    margin: 0 auto;
     position: relative;
-  }
-
-  .uniform-slider {
-    width: 100%;
-    height: 100%;
+    margin: 10px; /* Add spacing between sliders */
   }
 
   .uniform-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio within fixed dimensions */
+    object-fit: cover; /* Ensure images fit within container */
   }
 
-  /* Flex layout for a 2x2 matrix */
+  /* Flexbox layout for a 2x2 matrix */
   .columns.is-multiline {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping for multiple rows */
-    justify-content: center;
-    gap: 0px; /* Add spacing between sliders */
+    display: grid; /* Use grid layout for uniform alignment */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Add spacing between grid items */
+    justify-items: center; /* Center grid items horizontally */
   }
 
   .column.is-half {
-    flex: 0 0 100%; /* Each column takes 50% width minus gap */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 </style>
+
 
 <script>
   // Initialize Juxtapose sliders
