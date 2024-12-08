@@ -2,6 +2,42 @@
 <html>
 <head>
   <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GFN: Before and After Dehazing</title>
+  <style>
+    .slider-container {
+      position: relative;
+      max-width: 70%;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .image-before,
+    .image-after {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .image-after-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+      width: 50%; /* Default position for the slider */
+    }
+    .slider-handle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background-color: red;
+      cursor: ew-resize;
+      z-index: 2;
+    }
+  </style>
   <meta name="description" content="GFN: Advancing Underwater Image Enhancement with Swin Transformer and Adaptive Transformations">
   <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
   <meta property="og:description" content="GFN integrates advanced feature fusion and context-aware adaptive transformations for superior underwater imaging."/>
