@@ -264,18 +264,19 @@ Testing on real underwater datasets showed clear advantages over existing method
   </div>
 </section>
 
+
 <!-- Include JuxtaposeJS Library -->
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
 <style>
-  /* Uniform dimensions for all sliders, larger size */
+  /* Increase the size of each slider */
   .slider-container {
     width: 100%; /* Full width of its parent container */
-    max-width: 600px; /* Increase max width for larger sliders */
-    height: 400px; /* Increase height for larger sliders */
-    position: relative;
+    max-width: 800px; /* Increase max width for larger sliders */
+    height: 500px; /* Increase height for larger sliders */
     margin: 10px; /* Add spacing between sliders */
+    position: relative;
   }
 
   .uniform-slider img {
@@ -287,25 +288,17 @@ Testing on real underwater datasets showed clear advantages over existing method
   /* Grid layout for 2x2 matrix */
   .columns.is-multiline {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-gap: 20px; /* Add spacing between grid items */
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-gap: 20px; /* Space between grid items */
     justify-items: center; /* Center grid items */
+  }
+
+  /* Make the slider labels consistent */
+  .juxtapose .jx-label {
+    font-size: 16px; /* Larger labels */
   }
 </style>
 
-<script>
-  // Initialize Juxtapose sliders
-  document.addEventListener('DOMContentLoaded', function () {
-    const juxtaposeContainers = document.querySelectorAll('.juxtapose');
-    juxtaposeContainers.forEach(container => {
-      new juxtapose.JXSlider(container, {
-        startingPosition: "50%", // Initial slider position
-        showLabels: true,        // Show Before/After labels
-        mode: "horizontal"       // Horizontal slider
-      });
-    });
-  });
-</script>
 
 
 <section class="section" id="BibTeX">
