@@ -89,49 +89,78 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Before and After Dehazing</h2>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-centered">
       <!-- First Slider -->
-      <div class="column">
+      <div class="column is-half">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before1.jpg" alt="Before Dehazing" data-label="Before">
-            <img src="static/images/after11.jpg" alt="After Dehazing" data-label="After">
+            <img src="static/images/after1.jpg" alt="After Dehazing" data-label="After">
           </div>
         </div>
       </div>
 
       <!-- Second Slider -->
-      <div class="column">
+      <div class="column is-half">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before2.jpg" alt="Before Dehazing" data-label="Before">
-            <img src="static/images/after22.jpg" alt="After Dehazing" data-label="After">
+            <img src="static/images/after2.jpg" alt="After Dehazing" data-label="After">
           </div>
         </div>
       </div>
 
       <!-- Third Slider -->
-      <div class="column">
+      <div class="column is-half">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before3.jpg" alt="Before Dehazing" data-label="Before">
-            <img src="static/images/after33.jpg" alt="After Dehazing" data-label="After">
+            <img src="static/images/after3.jpg" alt="After Dehazing" data-label="After">
           </div>
         </div>
       </div>
 
       <!-- Fourth Slider -->
-      <div class="column">
+      <div class="column is-half">
         <div class="slider-container">
           <div class="juxtapose uniform-slider" data-startingposition="50%">
             <img src="static/images/before4.jpg" alt="Before Dehazing" data-label="Before">
-            <img src="static/images/after44.jpg" alt="After Dehazing" data-label="After">
+            <img src="static/images/after4.jpg" alt="After Dehazing" data-label="After">
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Include JuxtaposeJS Library -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+<style>
+  /* Slider container for consistent sizing */
+  .slider-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 10px auto;
+  }
+
+  .uniform-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 2x2 grid layout for Before/After sliders */
+  .columns.is-multiline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+  }
+</style>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -268,42 +297,6 @@ Testing on real underwater datasets showed clear advantages over existing method
 <!-- End Image Carousel -->
 
 
- <style>
-  /* Define slightly smaller dimensions for each slider */
-  .slider-container {
-    width: 100%; /* Full width of its parent container */
-    max-width: 450px; /* Reduced maximum width */
-    height: 300px; /* Reduced height */
-    margin: 10px auto; /* Center each slider with spacing */
-    position: relative;
-  }
-
-  /* Ensure images fill their containers */
-  .uniform-slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Preserve aspect ratio and fill container */
-  }
-
-  /* Grid layout for 2x2 matrix */
-  .columns.is-multiline {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-    grid-gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center each grid item */
-  }
-
-  .column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Make labels more prominent */
-  .juxtapose .jx-label {
-    font-size: 0px; /* Adjust label size for visibility */
-  }
-</style>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
