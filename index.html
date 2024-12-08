@@ -131,16 +131,11 @@
   </div>
 </section>
 
-<!-- Include JuxtaposeJS Library -->
-<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-
 <style>
-  /* Slider container for consistent sizing */
   .slider-container {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
+    max-width: 500px; /* Adjust size for larger images */
+    height: 350px;    /* Adjust height for consistency */
     margin: 10px auto;
   }
 
@@ -150,14 +145,25 @@
     object-fit: cover;
   }
 
-  /* 2x2 grid layout for Before/After sliders */
   .columns.is-multiline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    gap: 20px;
     justify-items: center;
   }
 </style>
+
+<!-- Juxtapose Initialization -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const juxtaposeSliders = document.querySelectorAll('.juxtapose');
+    juxtaposeSliders.forEach(slider => {
+      new juxtapose.JXSlider(slider, {
+        startingPosition: "50%"
+      });
+    });
+  });
+</script>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
