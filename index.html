@@ -269,11 +269,11 @@ Testing on real underwater datasets showed clear advantages over existing method
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
 <style>
-  /* Uniform dimensions for all sliders */
+  /* Uniform dimensions for all sliders, larger size */
   .slider-container {
     width: 100%; /* Full width of its parent container */
-    max-width: 500px; /* Set a fixed max width */
-    height: 350px; /* Set a fixed height */
+    max-width: 600px; /* Increase max width for larger sliders */
+    height: 400px; /* Increase height for larger sliders */
     position: relative;
     margin: 10px; /* Add spacing between sliders */
   }
@@ -281,7 +281,7 @@ Testing on real underwater datasets showed clear advantages over existing method
   .uniform-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images fit within container */
+    object-fit: cover; /* Ensure images fit within container without distortion */
   }
 
   /* Grid layout for 2x2 matrix */
@@ -292,20 +292,6 @@ Testing on real underwater datasets showed clear advantages over existing method
     justify-items: center; /* Center grid items */
   }
 </style>
-
-<script>
-  // Initialize Juxtapose sliders
-  document.addEventListener('DOMContentLoaded', function () {
-    const juxtaposeContainers = document.querySelectorAll('.juxtapose');
-    juxtaposeContainers.forEach(container => {
-      new juxtapose.JXSlider(container, {
-        startingPosition: "50%", // Initial slider position
-        showLabels: true,        // Show Before/After labels
-        mode: "horizontal"       // Horizontal slider
-      });
-    });
-  });
-</script>
 
 
 
