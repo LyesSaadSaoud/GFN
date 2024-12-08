@@ -40,6 +40,42 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+  <style>
+  /* Define slightly smaller dimensions for each slider */
+  .slider-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 450px; /* Reduced maximum width */
+    height: 300px; /* Reduced height */
+    margin: 10px auto; /* Center each slider with spacing */
+    position: relative;
+  }
+
+  /* Ensure images fill their containers */
+  .uniform-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve aspect ratio and fill container */
+  }
+
+  /* Grid layout for 2x2 matrix */
+  .columns.is-multiline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center each grid item */
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Make labels more prominent */
+  .juxtapose .jx-label {
+    font-size: 0px; /* Adjust label size for visibility */
+  }
+</style>
 <body>
 
 <section class="hero">
