@@ -222,8 +222,7 @@ Testing on real underwater datasets showed clear advantages over existing method
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Before and After Dehazing</h2>
-        <div class="juxtapose" style="max-width: 70%; margin: 0 auto;"
-             data-startingposition="50%">
+        <div class="juxtapose" style="max-width: 70%; margin: 0 auto;" data-startingposition="50%">
           <!-- Before Image -->
           <img src="static/images/before.jpg" alt="Before Dehazing" data-label="Before">
           <!-- After Image -->
@@ -234,56 +233,26 @@ Testing on real underwater datasets showed clear advantages over existing method
   </div>
 </section>
 
+<!-- JuxtaposeJS CSS -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
+<!-- JuxtaposeJS JS -->
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
 <script>
-  // JavaScript for the slider effect
-  const sliderContainer = document.querySelector('.slider-container');
-  const imageBefore = document.querySelector('.image-before');
-  const imageAfter = document.querySelector('.image-after');
-  const imageAfterWrapper = document.querySelector('.image-after-wrapper');
-  const sliderHandle = document.querySelector('.slider-handle');
-
-  let isDragging = false;
-
-  // Ensure the "after" image dynamically matches the size of the "before" image
-  const syncImageSizes = () => {
-    const width = imageBefore.offsetWidth;
-    const height = imageBefore.offsetHeight;
-
-    // Apply same size to the "after" image and its container
-    imageAfterWrapper.style.width = '50%'; // Keep default slider position
-    imageAfterWrapper.style.height = `${height}px`;
-    imageAfter.style.width = `${width}px`;
-    imageAfter.style.height = `${height}px`;
-  };
-
-  window.addEventListener('resize', syncImageSizes);
-  syncImageSizes(); // Initial call to sync sizes on load
-
-  sliderHandle.addEventListener('mousedown', () => {
-    isDragging = true;
-  });
-
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
-  sliderContainer.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    const rect = sliderContainer.getBoundingClientRect();
-    let offsetX = e.clientX - rect.left;
-
-    // Constrain the slider within the container
-    if (offsetX < 0) offsetX = 0;
-    if (offsetX > rect.width) offsetX = rect.width;
-
-    // Update slider and image widths
-    const percentage = (offsetX / rect.width) * 100;
-    imageAfterWrapper.style.width = `${percentage}%`;
-    sliderHandle.style.left = `${percentage}%`;
+  // Initialize JuxtaposeJS
+  document.addEventListener('DOMContentLoaded', function () {
+    const juxtaposeContainers = document.querySelectorAll('.juxtapose');
+    juxtaposeContainers.forEach(container => {
+      new juxtapose.JXSlider(container, {
+        startingPosition: "50%", // Starting position of the slider
+        showLabels: true,        // Show the "Before" and "After" labels
+        mode: "horizontal"       // Slider direction (horizontal/vertical)
+      });
+    });
   });
 </script>
+
 
 
 
