@@ -30,7 +30,7 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <!-- JuxtaposeJS CSS -->
+    <!-- JuxtaposeJS CSS -->
   <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -40,15 +40,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Remove the JuxtaposeJS logo
-    const logo = document.querySelector('.jx-logo');
-    if (logo) {
-      logo.style.display = 'none';
-    }
-  });
-</script>
+ 
 
 <body>
 
@@ -111,11 +103,20 @@
   </div>
 </section>
 
-<!-- JuxtaposeJS JS -->
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Wait for JuxtaposeJS to fully load
+    const removeJuxtaposeLogo = () => {
+      const logo = document.querySelector('.jx-logo');
+      if (logo) {
+        logo.style.display = 'none'; // Hide the logo
+      } else {
+        // Retry if logo is not yet available
+        setTimeout(removeJuxtaposeLogo, 100);
+      }
+    };
+
+    // Initialize JuxtaposeJS sliders
     const juxtaposeContainers = document.querySelectorAll('.juxtapose');
     juxtaposeContainers.forEach(container => {
       new juxtapose.JXSlider(container, {
@@ -124,6 +125,9 @@
         mode: "horizontal"       // Slider direction
       });
     });
+
+    // Attempt to remove the logo
+    removeJuxtaposeLogo();
   });
 </script>
 
