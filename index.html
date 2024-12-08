@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <style>
-    /* Hide JuxtaposeJS logo */
-    .jx-logo {
-      display: none !important;
-    }
-  </style>
-</head>
-
-<head>
+ <head>
   <meta charset="utf-8">
   <meta name="description" content="GFN: Advancing Underwater Image Enhancement with Swin Transformer and Adaptive Transformations">
   <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
@@ -49,6 +40,16 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Remove the JuxtaposeJS logo
+    const logo = document.querySelector('.jx-logo');
+    if (logo) {
+      logo.style.display = 'none';
+    }
+  });
+</script>
+
 <body>
 
 <section class="hero">
