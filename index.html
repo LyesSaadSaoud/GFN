@@ -293,6 +293,19 @@ Testing on real underwater datasets showed clear advantages over existing method
   }
 </style>
 
+<script>
+  // Initialize Juxtapose sliders
+  document.addEventListener('DOMContentLoaded', function () {
+    const juxtaposeContainers = document.querySelectorAll('.juxtapose');
+    juxtaposeContainers.forEach(container => {
+      new juxtapose.JXSlider(container, {
+        startingPosition: "50%", // Initial slider position
+        showLabels: true,        // Show Before/After labels
+        mode: "horizontal"       // Horizontal slider
+      });
+    });
+  });
+</script>
 
 
 <section class="section" id="BibTeX">
