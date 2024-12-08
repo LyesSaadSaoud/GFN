@@ -30,8 +30,20 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-    <!-- JuxtaposeJS CSS -->
+   <!-- JuxtaposeJS CSS -->
   <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
+  <!-- Custom Styles -->
+  <style>
+    .juxtapose {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+    /* Hide JuxtaposeJS logo */
+    .jx-logo {
+      display: none !important;
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -87,36 +99,23 @@
   </div>
 </section>
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Before and After Dehazing</h2>
-        <div class="juxtapose" style="max-width: 70%; margin: 0 auto;" data-startingposition="50%">
-          <!-- Before Image -->
-          <img src="static/images/before.jpg" alt="Before Dehazing" data-label="Before">
-          <!-- After Image -->
-          <img src="static/images/before.jpg" alt="After Dehazing" data-label="After">
-        </div>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">GFN: Before and After Dehazing</h1>
+      <div class="juxtapose" data-startingposition="50%">
+        <img src="static/images/before.jpg" alt="Before Dehazing" data-label="Before">
+        <img src="static/images/after.jpg" alt="After Dehazing" data-label="After">
       </div>
     </div>
   </div>
 </section>
 
+<!-- JuxtaposeJS JS -->
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Wait for JuxtaposeJS to fully load
-    const removeJuxtaposeLogo = () => {
-      const logo = document.querySelector('.jx-logo');
-      if (logo) {
-        logo.style.display = 'none'; // Hide the logo
-      } else {
-        // Retry if logo is not yet available
-        setTimeout(removeJuxtaposeLogo, 100);
-      }
-    };
-
-    // Initialize JuxtaposeJS sliders
     const juxtaposeContainers = document.querySelectorAll('.juxtapose');
     juxtaposeContainers.forEach(container => {
       new juxtapose.JXSlider(container, {
@@ -125,11 +124,9 @@
         mode: "horizontal"       // Slider direction
       });
     });
-
-    // Attempt to remove the logo
-    removeJuxtaposeLogo();
   });
 </script>
+
 
 </body>
 </html>
