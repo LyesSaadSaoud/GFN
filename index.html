@@ -1,97 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="description" content="GFN: Advancing Underwater Image Enhancement with Swin Transformer and Adaptive Transformations">
   <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
   <meta property="og:description" content="GFN integrates advanced feature fusion and context-aware adaptive transformations for superior underwater imaging."/>
+  <meta property="og:url" content="URL_OF_THE_WEBSITE"/>
   <meta property="og:image" content="static/images/GFN (1).png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Gated Fusion Network: Revolutionizing Underwater Image Processing">
+  <meta name="twitter:description" content="GFN combines Swin Transformer and RATUs for state-of-the-art underwater image enhancement.">
+  <meta name="twitter:image" content="static/images/GFN_twitter_banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Underwater Image Enhancement, GFN, RATUs, Swin Transformer, PSNR, Adaptive Transformations, Marine Exploration, Robotics, Environmental Monitoring">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>GFN: Gated Fusion Network for Underwater Image Enhancement</title>
   <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <!-- Bulma CSS & Other Styles -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- JavaScript Libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/index.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
   <style>
-    /* Ensure that section titles like "Abstract" are properly aligned */
+    /* Fix word-wrapping issue for section titles */
     h2.title {
       text-align: center;
-      margin-bottom: 20px;
+      white-space: nowrap;
+      word-break: normal;
     }
 
-    /* Ensures that the text doesn’t break into vertical letters */
+    /* Ensures text doesn’t break into vertical letters */
     .content p {
       text-align: justify;
-      word-break: normal;
-      white-space: normal;
+      word-wrap: break-word;
     }
 
-    /* Ensures responsiveness */
+    /* Prevents unintended stacking of elements */
     .column {
       padding: 15px;
     }
 
-    /* Prevents titles from being too wide */
+    /* Limits container width to prevent wrapping issues */
     .container.is-max-desktop {
       max-width: 1100px;
     }
   </style>
 </head>
-
+</head>
 <body>
 
-<!-- Title Section -->
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h1 class="title is-1">Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing</h1>
-      <p class="is-size-5">Lyes Saad Saoud, Irfan Hussain</p>
-      <p class="is-size-5">Khalifa University of Science and Technology, UAE | Preprint 2025</p>
-
-      <div class="buttons is-centered">
-        <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" class="button is-dark is-rounded">
-          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
-        </a>
-        <a href="https://github.com/LyesSaadSaoud/GFN_dehazing" class="button is-dark is-rounded">
-          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
-        </a>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"> Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater
+ Image Dehazing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#" target="_blank">Lyes Saad Saoud</a>,</span>
+            
+  <a href="#" target="_blank">Irfan Hussain</a>
+</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Khalifa University of Science and Technology, UAE<br>Preprint 2024
+            </span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/LyesSaadSaoud/GFN_dehazing" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body has-text-centered">
-      <img src="static/images/GFN (1).png" alt="GFN system illustration" style="width: 70%; border-radius: 10px;">
-      <h2 class="subtitle">Architecture of the proposed underwater image dehazing model.</h2>
+    <div class="hero-body">
+      <div style="position: relative; max-width: 100%; text-align: center;">
+        <img src="static/images/GFN (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Architecture of the proposed underwater image dehazing model, showcasing the Gated Fusion Network (GFN) with
+ Reprogramming Adaptive Transformation Units (RATUs) for context-aware dehazing.
+      </h2>
     </div>
   </div>
 </section>
 
-<!-- Abstract Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Abstract</h2>
-    <div class="content">
-      <p>Underwater image quality is degraded due to light absorption, scattering, and low illumination, affecting applications in marine research, robotics, and environmental assessment. Many existing methods fail to address a wide range of underwater conditions effectively. To overcome these challenges, we propose the Gated Fusion Network (GFN), integrating Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone for multi-stage feature fusion.</p>
-
-      <p>The Swin Transformer extracts fine details and generates confidence maps, guiding RATUs to perform adaptive transformations such as white balancing, gamma correction, and histogram equalization. A gated fusion mechanism selectively combines these enhancements, ensuring robust noise reduction and superior visual quality.</p>
-
-      <p>Testing on real underwater datasets demonstrates significant improvements, with the GFN outperforming WaterNet by 3.1 dB PSNR on the EUVP dataset. Similar gains were observed on ocean_ex and LSUI400 datasets, setting new benchmarks for underwater image enhancement.</p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+         Underwater image quality is degraded due to light absorption, scattering, and low illumination, which impacts visual clarity and usability. These problems hinder the effectiveness of the use of such images in areas including marine studies, robotics, and environmental assessment. Many current methods are not able to produce satisfactory solutions for a wide range of underwater conditions which hampers their utilization. To address these issues, we propose a novel Gated Fusion Network (GFN), which integrates Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone to perform multi-stage feature fusion. The Swin Transformer is capable of extracting high detailed and contextual information and thus generates the confidence maps which control the RATUs to perform context specific operations like white balancing, gamma correction and histogram equalization. A gated fusion mechanism then selectively combines these enhancements, ensuring robust noise reduction and superior visual quality across diverse underwater conditions.
+Testing on real underwater datasets showed clear advantages over existing methods. The GFN improved PSNR by 3.1 dB compared to WaterNet on the EUVP dataset. We saw similar gains with ocean_ex and LSUI400 data, pushing the boundaries of what's possible in underwater image enhancement.          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
