@@ -95,54 +95,115 @@
     </div>
   </div>
 </section>
-
-<!-- RATUs Model Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body has-text-centered">
-      <img src="static/images/RATU (1).png" alt="GFN system illustration" style="width: 70%; border-radius: 10px;">
-      <h2 class="subtitle">The proposed Reprogramming Adaptive Transformation Units (RATUs) for context-aware enhancement.</h2>
+    <div class="hero-body">
+      <div style="position: relative; max-width: 100%; text-align: center;">
+        <img src="static/images/RATU (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        The proposed Reprogramming Adaptive Transformation Units (RATUs) for context-aware enhancement. The yellow
+ blocks indicate the new components introduced in our model
+      </h2>
     </div>
   </div>
 </section>
 
-<!-- Image Carousel -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Comparison with State-of-the-Art Models</h2>
-    <div class="columns is-multiline">
-      <div class="column is-half">
-        <img src="static/images/Fig5.png" alt="LSUI400 Comparison" class="image is-fullwidth">
-        <p class="has-text-centered"><strong>Figure 5:</strong> LSUI400 dataset comparison.</p>
-      </div>
-      <div class="column is-half">
-        <img src="static/images/Fig6.png" alt="Ocean_ex Comparison" class="image is-fullwidth">
-        <p class="has-text-centered"><strong>Figure 6:</strong> Ocean_ex dataset comparison.</p>
+
+  <!-- Image Carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Image 1 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig5.png" alt="Comparative visual analysis of SOTA methods for LSUI400 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 5:</strong> A comparative visual analysis of SOTA methods for different images from the LSUI400 dataset. Left to right columns show the input image, compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig6.png" alt="Comparative visual analysis of SOTA methods for ocean_ex dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 6:</strong> A comparative visual analysis of SOTA methods for different images from the ocean_ex dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig7.png" alt="Comparative visual analysis of SOTA methods for UIEB100 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 7:</strong> A comparative visual analysis of SOTA methods for different images from the UIEB100 dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig8.png" alt="Comparative visual analysis of SOTA methods for UPoor200 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 8:</strong> A comparative visual analysis of SOTA methods for different images from the UPoor200 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig9.png" alt="Comparative visual analysis of SOTA methods for U45 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 9:</strong> A comparative visual analysis of SOTA methods for different images from the U45 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig10.png" alt="Comparative visual analysis of SOTA methods for RUIE_Color90 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 10:</strong> A comparative visual analysis of SOTA methods for different images from the RUIE_Color90 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig11.png" alt="Comparative visual analysis of SOTA methods for challenging-60 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 11:</strong> A comparative visual analysis of SOTA methods for different images from the challenging-60 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig12.png" alt="Comparative visual analysis of SOTA methods for KUMP dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 12:</strong> Comparative visual analysis of SOTA methods for selected images from the KUMP dataset. Left to right columns display the Input image and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+<!-- End Image Carousel -->
 
-<!-- Before and After Dehazing -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Before and After Dehazing</h2>
-    <div class="columns is-multiline">
-      <div class="column is-half">
-        <img src="static/images/before1.jpg" alt="Before Dehazing">
-        <img src="static/images/after11.jpg" alt="After Dehazing">
-      </div>
-      <div class="column is-half">
-        <img src="static/images/before2.jpg" alt="Before Dehazing">
-        <img src="static/images/after22.jpg" alt="After Dehazing">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BibTeX -->
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
 @article{GFN2024,
@@ -152,16 +213,105 @@
   publisher = {Preprint},
   doi = {......},
   url = {https://arxiv.org/...}}
-    </code></pre>
+</code></pre>
   </div>
 </section>
 
-<!-- Footer -->
+
+  <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Before and After Dehazing</h2>
+    <div class="columns is-multiline">
+      <!-- First Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before1.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after11.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before2.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after22.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before3.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after33.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before4.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after44.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Include JuxtaposeJS Library -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+
+<style>
+  /* Define slightly smaller dimensions for each slider */
+  .slider-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 450px; /* Reduced maximum width */
+    height: 300px; /* Reduced height */
+    margin: 10px auto; /* Center each slider with spacing */
+    position: relative;
+  }
+
+  /* Ensure images fill their containers */
+  .uniform-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve aspect ratio and fill container */
+  }
+
+  /* Grid layout for 2x2 matrix */
+  .columns.is-multiline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center each grid item */
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Make labels more prominent */
+  .juxtapose .jx-label {
+    font-size: 0px; /* Adjust label size for visibility */
+  }
+</style>
 <footer class="footer">
-  <div class="container has-text-centered">
-    <p>This page provides supplementary materials for "<strong>GFN: Gated Fusion Network for Underwater Image Enhancement</strong>".</p>
+  <div class="container">
+    <p>This page provides supplementary materials for "<strong>GFN: Gated Fusion Network for Underwater Image Enhancement</strong>." Access the paper, dataset, and code repository for more details.</p>
   </div>
 </footer>
 
 </body>
-</html>
+</html> 
