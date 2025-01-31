@@ -13,13 +13,17 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- Bulma CSS & Other Styles -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  
 
   <style>
     /* Prevents unwanted word wrapping on section titles */
@@ -49,6 +53,19 @@
     /* Limits container width to prevent excessive wrapping */
     .container.is-max-desktop {
       max-width: 1100px;
+    }
+
+    /* Carousel Styling */
+    .carousel {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -85,34 +102,19 @@
   </div>
 </section>
 
+<!-- Abstract Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-         Underwater image quality is degraded due to light absorption, scattering, and low illumination, which impacts visual clarity and usability. These problems hinder the effectiveness of the use of such images in areas including marine studies, robotics, and environmental assessment. Many current methods are not able to produce satisfactory solutions for a wide range of underwater conditions which hampers their utilization. To address these issues, we propose a novel Gated Fusion Network (GFN), which integrates Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone to perform multi-stage feature fusion. The Swin Transformer is capable of extracting high detailed and contextual information and thus generates the confidence maps which control the RATUs to perform context specific operations like white balancing, gamma correction and histogram equalization. A gated fusion mechanism then selectively combines these enhancements, ensuring robust noise reduction and superior visual quality across diverse underwater conditions.
-Testing on real underwater datasets showed clear advantages over existing methods. The GFN improved PSNR by 3.1 dB compared to WaterNet on the EUVP dataset. We saw similar gains with ocean_ex and LSUI400 data, pushing the boundaries of what's possible in underwater image enhancement.          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div style="position: relative; max-width: 100%; text-align: center;">
-        <img src="static/images/RATU (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
-      </div>
-      <h2 class="subtitle has-text-centered">
-        The proposed Reprogramming Adaptive Transformation Units (RATUs) for context-aware enhancement. The yellow
- blocks indicate the new components introduced in our model
-      </h2>
-    </div>
-  </div>
-</section>
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content">
+      <p>Underwater image quality is degraded due to light absorption, scattering, and low illumination, affecting applications in marine research, robotics, and environmental assessment. Many existing methods fail to address a wide range of underwater conditions effectively. To overcome these challenges, we propose the Gated Fusion Network (GFN), integrating Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone for multi-stage feature fusion.</p>
 
+      <p>The Swin Transformer extracts fine details and generates confidence maps, guiding RATUs to perform adaptive transformations such as white balancing, gamma correction, and histogram equalization. A gated fusion mechanism selectively combines these enhancements, ensuring robust noise reduction and superior visual quality.</p>
+
+      <p>Testing on real underwater datasets demonstrates significant improvements, with the GFN outperforming WaterNet by 3.1 dB PSNR on the EUVP dataset. Similar gains were observed on ocean_ex and LSUI400 datasets, setting new benchmarks for underwater image enhancement.</p>
+    </div>
+  </div>
+</section>
 
   <!-- Image Carousel -->
 <section class="hero is-small">
