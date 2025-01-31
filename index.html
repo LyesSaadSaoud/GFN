@@ -1,49 +1,57 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="description" content="GFN: Advancing Underwater Image Enhancement with Swin Transformer and Adaptive Transformations">
+  <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
+  <meta property="og:description" content="GFN integrates advanced feature fusion and context-aware adaptive transformations for superior underwater imaging."/>
+  <meta property="og:image" content="static/images/GFN (1).png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study</title>
+  <title>GFN: Gated Fusion Network for Underwater Image Enhancement</title>
   <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
 
+  <style>
+    /* Prevents unwanted word wrapping on section titles */
+    h2.title {
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+
+    /* Ensures paragraphs do not break into vertical letters */
+    .content p {
+      text-align: justify;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Ensures titles and text stay in a horizontal layout */
+    .column {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Limits container width to prevent excessive wrapping */
+    .container.is-max-desktop {
+      max-width: 1100px;
+    }
+  </style>
+</head>
 
 <body>
 
@@ -77,35 +85,67 @@
   </div>
 </section>
 
-<!-- Abstract Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Abstract</h2>
-    <div class="content">
-      <p>Underwater image quality is degraded due to light absorption, scattering, and low illumination, affecting applications in marine research, robotics, and environmental assessment. Many existing methods fail to address a wide range of underwater conditions effectively. To overcome these challenges, we propose the Gated Fusion Network (GFN), integrating Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone for multi-stage feature fusion.</p>
-
-      <p>The Swin Transformer extracts fine details and generates confidence maps, guiding RATUs to perform adaptive transformations such as white balancing, gamma correction, and histogram equalization. A gated fusion mechanism selectively combines these enhancements, ensuring robust noise reduction and superior visual quality.</p>
-
-      <p>Testing on real underwater datasets demonstrates significant improvements, with the GFN outperforming WaterNet by 3.1 dB PSNR on the EUVP dataset. Similar gains were observed on ocean_ex and LSUI400 datasets, setting new benchmarks for underwater image enhancement.</p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+         Underwater image quality is degraded due to light absorption, scattering, and low illumination, which impacts visual clarity and usability. These problems hinder the effectiveness of the use of such images in areas including marine studies, robotics, and environmental assessment. Many current methods are not able to produce satisfactory solutions for a wide range of underwater conditions which hampers their utilization. To address these issues, we propose a novel Gated Fusion Network (GFN), which integrates Reprogramming Adaptive Transformation Units (RATUs) and a Swin Transformer backbone to perform multi-stage feature fusion. The Swin Transformer is capable of extracting high detailed and contextual information and thus generates the confidence maps which control the RATUs to perform context specific operations like white balancing, gamma correction and histogram equalization. A gated fusion mechanism then selectively combines these enhancements, ensuring robust noise reduction and superior visual quality across diverse underwater conditions.
+Testing on real underwater datasets showed clear advantages over existing methods. The GFN improved PSNR by 3.1 dB compared to WaterNet on the EUVP dataset. We saw similar gains with ocean_ex and LSUI400 data, pushing the boundaries of what's possible in underwater image enhancement.          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="position: relative; max-width: 100%; text-align: center;">
+        <img src="static/images/RATU (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        The proposed Reprogramming Adaptive Transformation Units (RATUs) for context-aware enhancement. The yellow
+ blocks indicate the new components introduced in our model
+      </h2>
     </div>
   </div>
 </section>
 
 
-<!-- End Image Carousel -->
-<!-- Results Section -->
-<!-- Image Carousel -->
+  <!-- Image Carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
 
+        <!-- Image 1 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig5.png" alt="Comparative visual analysis of SOTA methods for LSUI400 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 5:</strong> A comparative visual analysis of SOTA methods for different images from the LSUI400 dataset. Left to right columns show the input image, compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig6.png" alt="Comparative visual analysis of SOTA methods for ocean_ex dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 6:</strong> A comparative visual analysis of SOTA methods for different images from the ocean_ex dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
         <!-- Image 3 -->
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/image7.png" alt="Qualitative comparison of segmentation results" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <img src="static/images/Fig7.png" alt="Comparative visual analysis of SOTA methods for UIEB100 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Figure 1:</strong> Qualitative comparison of segmentation results. This figure compares the segmentation performance of various models on sample images, highlighting differences in segmentation quality and accuracy. (a) Input image, (b) ground truth, (c) DeepLabV3, (d) LRASPP, (e) FCN, (f) Mask R-CNN, (g) YOLOv5-Seg, (h) YOLOv8-Seg, (i) Detectron2, (j) MobileSAM Baseline, and (k) YOLOv9+MobileSAM.
+              <strong>Figure 7:</strong> A comparative visual analysis of SOTA methods for different images from the UIEB100 dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
             </h2>
           </div>
         </div>
@@ -113,9 +153,9 @@
         <!-- Image 4 -->
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/image6.png" alt="Comparative visual illustration of state-of-the-art depth estimation methods" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <img src="static/images/Fig8.png" alt="Comparative visual analysis of SOTA methods for UPoor200 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Figure 2:</strong> A comparative visual illustration of state-of-the-art depth estimation methods applied to sample images from the depth dataset. This comparison includes the local-depth estimation approach implemented in the Hubot alongside other baseline methods. Sample images span a range of lighting conditions for assessing their impact on depth-estimation performance.
+              <strong>Figure 8:</strong> A comparative visual analysis of SOTA methods for different images from the UPoor200 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
             </h2>
           </div>
         </div>
@@ -123,9 +163,9 @@
         <!-- Image 5 -->
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/image5.png" alt="Processed images of Houbara bustards demonstrating detection and positioning" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <img src="static/images/Fig9.png" alt="Comparative visual analysis of SOTA methods for U45 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Figure 3:</strong> Processed images of Houbara bustards demonstrating detection and relative positioning within the field of view. The center of gravity of the image is marked with a blue cross, whereas the detected Houbara is highlighted with a red mask.
+              <strong>Figure 9:</strong> A comparative visual analysis of SOTA methods for different images from the U45 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
             </h2>
           </div>
         </div>
@@ -133,9 +173,9 @@
         <!-- Image 6 -->
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/image3.png" alt="Examples of HuBot’s movements across various environments" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <img src="static/images/Fig10.png" alt="Comparative visual analysis of SOTA methods for RUIE_Color90 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Figure 4:</strong> Examples of HuBot’s movements across various environments: Top row: Feeding motion sequence demonstrating biomimetic movements during feeding behaviors. Second row: Head left and right motion showcasing head-orientation adjustments, mimicking natural head movements. Third row: Movement on a flat surface illustrating stability and navigation on even terrain. Fourth row: Movement on a grass surface highlighting adaptability to grassy terrains. Bottom row: Movement on a granular surface depicting maneuverability on sandy and granular surfaces. These images demonstrate HuBot’s operational capabilities under different conditions, enhancing understanding of its observations with varied environments.
+              <strong>Figure 10:</strong> A comparative visual analysis of SOTA methods for different images from the RUIE_Color90 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
             </h2>
           </div>
         </div>
@@ -143,9 +183,19 @@
         <!-- Image 7 -->
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/image4.png" alt="HuBot’s preliminary trials with Houbara bustards in captivity" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <img src="static/images/Fig11.png" alt="Comparative visual analysis of SOTA methods for challenging-60 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Figure 5:</strong> HuBot’s preliminary trials with Houbara bustards in captivity. Top row: interaction with Female Houbara bustard, reacting with avoidance and cautious behavior. Second row: Male performing sexual courtship behavior directed at the HuBot. Third row: Male exhibiting a cautious stance, closely observing HuBot’s movements without closely approaching and interacting. Bottom Row: Male performing behaviors similar to the first male, including courtship display behavior. These examples illustrate varied behavioral responses of captive Houbara bustards toward the HuBot, linked to sex, individual personality, and, for males, individual differences in sexual motivation.
+              <strong>Figure 11:</strong> A comparative visual analysis of SOTA methods for different images from the challenging-60 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig12.png" alt="Comparative visual analysis of SOTA methods for KUMP dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 12:</strong> Comparative visual analysis of SOTA methods for selected images from the KUMP dataset. Left to right columns display the Input image and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
             </h2>
           </div>
         </div>
