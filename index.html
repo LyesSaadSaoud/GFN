@@ -55,18 +55,33 @@
       max-width: 1100px;
     }
 
-    /* Carousel Styling */
+    <!-- Custom Styles -->
+  <style>
+    /* Ensures carousel is centered and properly sized */
     .carousel {
-      width: 100%;
+      width: 90%;
       max-width: 900px;
       margin: auto;
     }
 
+    .carousel-item {
+      text-align: center;
+    }
+
     .carousel img {
       width: 100%;
-      height: auto;
+      max-height: 450px;
+      object-fit: contain;
       border-radius: 10px;
     }
+
+    .carousel-caption {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
   </style>
 </head>
 
