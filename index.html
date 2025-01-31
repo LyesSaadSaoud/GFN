@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -28,25 +27,31 @@
   <script src="static/js/index.js"></script>
 
   <style>
-    /* Fix word-wrapping issue for section titles */
+    /* Prevents unwanted word wrapping on section titles */
     h2.title {
+      display: inline-block;
       text-align: center;
       white-space: nowrap;
       word-break: normal;
+      overflow-wrap: break-word;
     }
 
-    /* Ensures text doesn’t break into vertical letters */
+    /* Ensures paragraphs do not break into vertical letters */
     .content p {
       text-align: justify;
       word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
-    /* Prevents unintended stacking of elements */
+    /* Ensures titles and text stay in a horizontal layout */
     .column {
       padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Limits container width to prevent wrapping issues */
+    /* Limits container width to prevent excessive wrapping */
     .container.is-max-desktop {
       max-width: 1100px;
     }
@@ -55,56 +60,32 @@
 
 <body>
 
-
+<!-- Title Section -->
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater
- Image Dehazing</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="#" target="_blank">Lyes Saad Saoud</a>,</span>
-            
-  <a href="#" target="_blank">Irfan Hussain</a>
-</span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Khalifa University of Science and Technology, UAE<br>Preprint 2025
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/LyesSaadSaoud/GFN_dehazing" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-1">Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing</h1>
+      <p class="is-size-5">Lyes Saad Saoud, Irfan Hussain</p>
+      <p class="is-size-5">Khalifa University of Science and Technology, UAE | Preprint 2024</p>
+
+      <div class="buttons is-centered">
+        <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" class="button is-dark is-rounded">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+        </a>
+        <a href="https://github.com/LyesSaadSaoud/GFN_dehazing" class="button is-dark is-rounded">
+          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div style="position: relative; max-width: 100%; text-align: center;">
-        <img src="static/images/GFN (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
-      </div>
-      <h2 class="subtitle has-text-centered">
-        Architecture of the proposed underwater image dehazing model, showcasing the Gated Fusion Network (GFN) with
- Reprogramming Adaptive Transformation Units (RATUs) for context-aware dehazing.
-      </h2>
+    <div class="hero-body has-text-centered">
+      <img src="static/images/GFN (1).png" alt="GFN system illustration" style="width: 70%; border-radius: 10px;">
+      <h2 class="subtitle">Architecture of the proposed underwater image dehazing model.</h2>
     </div>
   </div>
 </section>
